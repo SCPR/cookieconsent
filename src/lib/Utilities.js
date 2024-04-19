@@ -92,4 +92,11 @@ export default class Utilities {
     elem.dispatchEvent(event);
   }
 
+  static gpcSignal() {
+    if (navigator.globalPrivacyControl) {
+      return navigator.globalPrivacyControl == "1";
+    }
+    return false;
+  }
+
 }
