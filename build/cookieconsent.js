@@ -95,6 +95,14 @@ var Utilities = /*#__PURE__*/function () {
       }
       elem.dispatchEvent(event);
     }
+  }, {
+    key: "gpcSignal",
+    value: function gpcSignal() {
+      if (navigator.globalPrivacyControl) {
+        return navigator.globalPrivacyControl == "1";
+      }
+      return false;
+    }
   }]);
   return Utilities;
 }();
